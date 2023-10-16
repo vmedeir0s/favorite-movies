@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FormDataType } from '../types';
 import Swal from 'sweetalert2';
+import { ChevronDoubleDownIcon } from '@heroicons/react/24/outline';
 
 export default function Form({
   onAddNewMovie,
@@ -83,7 +84,7 @@ export default function Form({
   };
 
   return (
-    <div>
+    <div className="max-sm:h-screen flex flex-col">
       <h1 className="text-5xl font-bold text-zinc-50">
         Formulario de Cadastro
       </h1>
@@ -215,6 +216,9 @@ export default function Form({
           Add
         </button>
       </form>
+      <span className="sm:hidden self-center mt-10">
+        <ChevronDoubleDownIcon className="h-6 w-6 text-zinc-400" />{' '}
+      </span>
     </div>
   );
 }
