@@ -13,7 +13,7 @@ export default function Movielist({ movies, setMovies }: MovieListProps) {
   };
 
   return (
-    <div className="flex gap-3 flex-wrap justify-center">
+    <div className="flex gap-3 flex-wrap justify-center mb-10">
       {movies.map((movie) => (
         <Movie key={movie.id} movie={movie} onToggleFavorite={toggleFavorite} />
       ))}
